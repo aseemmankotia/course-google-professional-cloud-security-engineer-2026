@@ -1,0 +1,16 @@
+## Chapter 12: Full Practice Exam Simulation and 120-Minute Time-Management Strategy — Flashcards
+
+| # | Front (Question) | Back (Answer) |
+|---|-----------------|---------------|
+| 1 | 120-minute exam, ~50-60 questions — average time budget per question? | ~2.1 min/question at 55 questions (120÷55). Exam tip: aim to answer in ~90 sec on first pass, saving the remaining buffer for flagged-question review in the last 10-15 minutes. |
+| 2 | Exam keyword 'BEST' vs 'MOST' vs 'LEAST' — what changes? | BEST = optimal tradeoff across all stated constraints (cost, ops, security). MOST/LEAST = ranks a single property (e.g., least privilege, least cost). Re-read the constraint list before eliminating options. |
+| 3 | Strategy when two options both technically satisfy a scenario's requirement | Recheck ALL stated constraints (cost, managed vs. manual, compliance, least privilege) — the correct answer satisfies every constraint, not just the primary one. Eliminate the option needing extra manual effort. |
+| 4 | When should you flag a question instead of guessing and moving on? | Flag when narrowed to 2 options but unsure, or the answer hinges on a memorized limit/number. Always submit your best guess first — never leave blank — then flag for later review. |
+| 5 | Which Cloud Audit Log type is always enabled and free? | Admin Activity and System Event logs. Data Access logs are opt-in per service (BigQuery Data Access is the default-on exception) and add to log storage cost. |
+| 6 | VPC Service Controls vs Firewall rules — which stops exfiltration to unauthorized GCP projects? | VPC Service Controls (perimeter around resources/APIs). Firewall rules only control network-layer traffic, not API-level data movement between Google-managed services. |
+| 7 | CMEK vs CSEK — which does BigQuery support? | BigQuery supports CMEK (Cloud KMS-managed keys) only. CSEK is NOT supported by BigQuery — a frequent exam trap. |
+| 8 | Org Policy constraint to block external IPs on all VMs org-wide? | constraints/compute.vmExternalIpAccess, set to deny. Enforced hierarchically at the Organization Policy level, overriding per-project firewall configuration. |
+| 9 | Secret Manager vs Cloud KMS — core distinction? | Secret Manager stores and versions secret VALUES (API keys, passwords) with IAM access control. Cloud KMS manages the cryptographic KEYS used to encrypt/decrypt data, not the secret values themselves. |
+| 10 | Final review pass strategy — last 10-15 minutes of a 120-min exam | 1) Fill any remaining blanks. 2) Revisit ONLY flagged questions. 3) Don't second-guess confidently answered questions — first instinct is usually correct. 4) Recheck BEST/LEAST keywords only on flagged items. |
+| 11 | Elimination technique for a 4-option scenario question | Immediately cut options that are deprecated services, violate a stated cost/compliance constraint, or require manual/unmanaged processes. This typically removes 2 of 4 options fast. |
+| 12 | Access Transparency — what does it log, and the common exam confusion? | Logs Google support engineers' access to your customer content. Frequently confused with Cloud Audit Logs, which log YOUR organization's own activity, not Google's. |
